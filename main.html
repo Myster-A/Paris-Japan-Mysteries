@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- meta tags -->
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- Bootstrap -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <!-- Bootstrap/icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+        <!-- Jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- Leaflet maps -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <!-- JS -->
+        <script src="script.js"></script>
+        <!-- Onglet -->
+		<title>Paris Japan Mysteries</title>
+		<link rel="shortcut icon" href="Media/pjm_logo.png">
+        <style>
+            p {
+                font-size: 1.2em ;
+            }
+            #map2 { height: 50vh; }
+            #map3 { height: 50vh; }
+            #map4 { height: 50vh; }
+            #map5 { height: 50vh; }
+            #map6 { height: 50vh; }
+            #map7 { height: 50vh; }
+            #map8 { height: 50vh; }
+            #map9 { height: 50vh; }
+            #map10 { height: 50vh; }
+            #map11 { height: 50vh; }
+        </style>
+	</head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <div class="d-inline">
+                    <a class="navbar-brand" href="#">
+                        <!-- <img width=" 35px" src="Media/mochi_sans_fond.png" alt="logo">-->
+                        Paris Japan Mysteries
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+
+        <!-- ENIGME 1 -->
+        <div class="enigme1">
+            <!-- Barre de progression 0% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%">0%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 1 :</h2>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer1"><p>Code à déchiffrer :</p><img width="100%" src="./Media/E1.png" alt="texte à déchiffrer"></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion1">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion1">
+                                    <div class="accordion-body">Mineur en majeur et majeur en numéro.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer1" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn1">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <!-- ENIGME 2 -->
+        <div class="enigme2">
+            <!-- Barre de progression 11% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="11" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 11%">11%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 2 :</h2>
+                    <!-- Carte -->
+                    <div id="map2"></div><br>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer2"><p>Mes jardins et mes temples racontent une histoire impériale. 
+                            La splendeur des Geishas et la délicatesse des cerisiers en fleurs en fit un lieu capital. 
+                            Je suis ?</p></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion2">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion2">
+                                    <div class="accordion-body">K est ma première lettre.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer2" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn2">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <!-- ENIGME 3 -->
+        <div class="enigme3">
+            <!-- Barre de progression 22% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 22%">22%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 3 :</h2>
+                    <!-- Carte -->
+                    <div id="map3"></div><br>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer3"><p>Kyoto est l'unique lieu d'où l’on peut observer son architecture. 
+                            Bien placé, on distingue des lignes d'une parfaite régularité. Au couleur du soleil levant, dans son cadre elle réside. 
+                            Elle est le trésor du japon. Je suis ?</p></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion3">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion3">
+                                    <div class="accordion-body">C’est gros comme une maison.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer3" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn3">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <!-- ENIGME 4 -->
+        <div class="enigme4">
+            <!-- Barre de progression 33% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 33%">33%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 4 :</h2>
+                    <!-- Carte -->
+                    <div id="map4"></div><br>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer4"><p>De la culture elle en fait son temple. On y pénètre sous le regard de Léonard et Aristote. 
+                            Je suis ?</p></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion4">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion4">
+                                    <div class="accordion-body">Jadis collectionneur.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer4" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn4">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <!-- ENIGME 5 -->
+        <div class="enigme5">
+            <!-- Barre de progression 44% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 44%">44%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 5 :</h2>
+                    <!-- Carte -->
+                    <div id="map5"></div><br>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer5"><p>Perché au 28 rue de little Tokyo. 
+                            Je suis ?</p></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion5">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion5">
+                                    <div class="accordion-body">Chat perché.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer5" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn5">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <!-- ENIGME 6 -->
+        <div class="enigme6">
+            <!-- Barre de progression 55% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 55%">55%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 6 :</h2>
+                    <!-- Carte -->
+                    <div id="map6"></div><br>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer6"><p>Paris, Tokyo et tant d’autres tous réunis en une cité. Je suis ?</p></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion6">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion6">
+                                    <div class="accordion-body">Cité dans la cité.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer6" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn6">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <!-- ENIGME 7 -->
+        <div class="enigme7">
+            <!-- Barre de progression 66% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 66%">66%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 7 :</h2>
+                    <!-- Carte -->
+                    <div id="map7"></div><br>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer7"><p>Dans la demeure de la déesse solaire, pas d'hippodrome mais une écurie prospère. 
+                            Sur panneaux d'or une scène intemporelle, des chevaux galopent et des chiens rebelles. 
+                            Je suis ?</p></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion7">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion7">
+                                    <div class="accordion-body">De mon art je suis le pionnier.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer7" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn7">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <!-- ENIGME 8 -->
+        <div class="enigme8">
+            <!-- Barre de progression 77% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 77%">77%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 8 :</h2>
+                    <!-- Carte -->
+                    <div id="map8"></div><br>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer8"><span style="font-size: 2em;" >門</span><p>Seriez-vous capable de retrouver le Kanji ci-dessus ? Et que symbolise-t-il dans ce paysage urbain ?</p></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion8">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion8">
+                                    <div class="accordion-body">La réponse émerge uniquement lorsqu'on aborde la question sous le bon angle.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer8" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn8">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ENIGME 9 -->
+        <div class="enigme9">
+            <!-- Barre de progression 88% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 88%">88%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 9 :</h2>
+                    <!-- Carte -->
+                    <div id="map9"></div><br>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer9"><p>Au-delà de la porte dorée se trouve le bois sacré. Je suis ?</p></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion9">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion9">
+                                    <div class="accordion-body">Cherche bien sur la carte.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer9" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn9">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <!-- ENIGME 10 -->
+        <div class="enigme10">
+            <!-- Barre de progression 99% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 99%">99%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 10 :</h2>
+                    <!-- Carte -->
+                    <div id="map10"></div><br>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer10"><p>Près du sanctuaire défilent d'immuables pèlerins. 
+                            Furin et flasque de whisky en gage de présents aux divins kamis. 
+                            Le sage patriarche en prière zen dit :  
+                            "Des entrailles de la terre,
+                            au vertige de l'éther.
+                            Des cimes manifestent,
+                            au reflet céleste.
+                            Plus dur que la pierre, 
+                            plus délicat il n’y a pas.
+                            De la vie elle est mère,
+                            elle guidera tes pas.
+                            Sans cesse suggérer,
+                            mais jamais réciter.
+                            Maximes et mantras,
+                            purifient le karma." Je suis ?
+                            </p></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion10">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion10">
+                                    <div class="accordion-body">De toutes les composantes élémentaires il en manque une.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer10" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn10">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+
+        <!-- DRAMA -->
+        <div class="drama">
+            <div class="container">
+                <h2 class="p-4">Narration</h2>
+                <p>
+                    C’est alors que les inscriptions en brillance sur le sceau de jade se dissipent le long des innombrables et fines ciselures qui recouvrent le sceau. 
+                    La pierre se ternit peu à peu, sans qu'aucun signe ne se manifeste. Désemparé et abattu vous tombez à genoux, lâchant la pierre de jade de votre main…
+                    Tant d’efforts pour rien, pas l’ombre d’un indice même Mochito, qui d'habitude est plein de ressources, reste silencieux. 
+                    Tant qu’il avait de l’espoir, il y avait de vie mais de toutes les souffrances, l'échec et la plus misérable. 
+                    La gorge nouée et la vision noyée, vous serez votre fidèle compagnon dans vos bras. 
+                    Tandis que Mochito étouffe tant bien que mal ses sanglots, les premières perles roulent sur son visage rond et poudré. 
+                    Alors que vous éclatez en sanglots, quelques larmes viennent mouiller le maudit sceau. 
+                    C'est à ce moment que la mystérieuse inscription réapparaît à sa surface, agrémentée d'une formule.
+                </p>
+                <!-- Bouton -->
+                <div class="p-4">
+                    <button class="btn btn-dark" id="continue">Continuer</button>
+                </div> 
+            </div>
+        </div>
+
+
+        <!-- ENIGME 11 -->
+        <div class="enigme11">
+            <!-- Barre de progression 99% -->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 99%">99%</div>
+            </div>
+            <div class="container">
+                <div id="quiz-container">
+                    <h2 class="p-4">Enigme 11 :</h2>
+                    <!-- Carte -->
+                    <div id="map11"></div><br>
+                    <div class="form-group question">
+                        <!-- Question -->
+                        <label for="answer11"><p>“lag rand eva gued eka nag a wa”, 7 gouttes en forme une ! Je suis ?</p></label>
+                        <!-- Indice -->
+                        <div class="accordion accordion-flush border border-warning" id="accordion11">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        <img width="25px" src="Media/mochi_sans_fond.png" alt="Mochito">
+                                        Besoin d'aide ?
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordion11">
+                                    <div class="accordion-body">De ce chef-d’œuvre, j’en suis le maître.</div>
+                                </div>
+                            </div>
+                        </div><br>
+                        <!-- Réponse -->
+                        <input type="text" class="form-control" id="answer11" placeholder="Votre réponse">
+                    </div>
+                    <!-- Bouton -->
+                    <div class="p-4">
+                        <button class="btn btn-primary" id="submitBtn11">Répondre</button>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+        <!-- END -->
+        <div class="end">
+            <div class="container">
+                <h2 class="p-4">Narration</h2>
+                <p>
+                    L’ultime énigme résolue rompt, dans un tonnerre céleste, le charme qui avait emprisonné Mochito. 
+                    Tandis que les lieux vibrent encore d'une lumière éclatante, devant vous se dresse un majestueux kami. 
+                    Kaguya hime, maintenant affranchie, se présente à vous et vous révèle la véritable nature du sceau de jade.
+                    Ce dernier, qui semblait être un simple artefact, est en réalité le mandat céleste. 
+                    Kaguya hime sollicite votre assistance pour l'accompagner dans son retour. L'exil, qui n'a que trop duré, touche à sa fin. 
+                    De temps est venu de retourner sur la terre de ses ancêtres pour réclamer ce qui lui revient de droit : le trône d'Amaterasu. 
+                    Alors que vous pensiez mener l'enquête pour retrouver vos effets personnels et votre mémoire au passage, vous voilà propulsé dans une aventure qui vous dépasse. 
+                    Etes vous prêt à suivre Kaguya hime dans sa quête ?
+                </p>
+                <p>À suivre…</p>
+                <!-- Bouton -->
+                <div class="p-4">
+                    <button class="btn btn-dark" id="end">fin</button>
+                </div> 
+            </div>
+        </div>
+
+    <!-- LEAFLET MAPS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    </body>
+</html>
