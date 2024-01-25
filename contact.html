@@ -16,7 +16,17 @@
 		<title>Paris Japan Mysteries</title>
 		<link rel="shortcut icon" href="Media/pjm_logo.png">
         <!-- JS -->
-        <script src="script.js"></script>
+        <script src="contact.js"></script>
+        <!-- EmailJS -->
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+            (function(){
+                emailjs.init("wSktylbEx5tA_eO0G");
+            })();
+        </script>
+        <!-- Style -->
         <style>
             p {
                 font-size: 1.2em ;
@@ -24,6 +34,7 @@
         </style>
 	</head>
     <body>
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <div class="d-inline">
@@ -45,32 +56,65 @@
             </div>
         </nav>
 
-        <div class="container p-4">
-            <h2>Bienvenue dans Paris Japan Mysteries</h2><hr>
-            <p>PJM est un jeu de piste, cette aventure vous conduira parmi les endroits emblématiques de la culture nippone au cœur de la capitale. 
-                Dans votre quête vous serez accompagné de  Mochito, votre compagnon vous sera d’une grande utilité dans la résolution des diverses énigmes afin que vous puissiez retrouver votre chemin.</p>
-            <p>C’est ainsi qu’un beau matin vous êtes tirés de votre sommeil par les murmures de la ville qui s'éveille. 
-                Vous réalisez que vous êtes étendu, sur les quais de Seine au abord de la majestueuse dame de fer, sans savoir comment vous êtes arrivé là. 
-                Mochito, votre fidèle compagnon, est déjà réveillé et vous observe avec des yeux pétillants de malice. 
-                Tandis que les quelques promeneurs matinaux vous jettent des regards intrigués, se demandant sûrement ce qu’un mochi coiffé d’une clémentine et un humain font en tête à tête. 
-                Vous essayez, tant bien que mal, de reconstituer les événements de votre dernière soirée dans votre esprit embrumé. 
-                Les questions se bousculent dans votre tête mais aucun souvenir des faits passés.</p>
-            <div class="text-center pb-3">
-                <img src="Media/quai_de_seine.jpeg" width="800px" class="img-fluid" alt="Mochito sur les quais de Seine">
-            </div>
-            <p>Scrutant les environs tout en fouillant vos poches à la recherche de votre téléphone et de vos clés, votre main tombe sur un objet froid et carré que vous retirez de votre poche avec une certaine appréhension. 
-                Point de portable ni de clé mais à votre grande surprise un objet d’un vert laiteux qui ressemble en tout point à un sceau de jade.</p>
-            <div class="text-center pb-3">
-                <img src="Media/sceau_de_jade.jpeg" width="800px" class="img-fluid" alt="sceau de jade">
-            </div>
-            <p>Désemparé vous interrogez Mochito du regard, tandis que les premiers rayons du soleil viennent caresser la pierre, une étrange lueur semble s’en dégager. 
-                Mochito vous fait alors mine de retourner la pierre, dévoilant ainsi sous vos yeux une mystérieuse inscription baignée d'une lumière bleutée. 
-                Lentement vous murmurez l’inscription: “lag rand eva gued eka nag awa”, accompagnée d’une énigme...</p>
-            <div class="text-center p-4">
-                <button class="btn btn-lg btn-dark rounded-pill" id="start">Commencer</button>
+        <div class="m-4">
+            <div class="container bg-light">
+                <h2 class="text-secondary fw-bold text-center p-4 bg-light">CONTACTEZ-MOI</h2>
+                <form  id="myForm" action="#" method="post">
+                    <div class="container">
+                        <hr><br>
+            
+                        <!--Contacts-->
+                        <fieldset class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <label for="lastname">Nom</label>
+                                    <input type="text" id="lastname" class="form-control" placeholder="DUBOIS">
+                                </div>
+                                <div class="col-6">
+                                    <label for="firstname">Prénom</span></label>
+                                    <input type="text" id="firstname" class="form-control" placeholder="Camille">
+                                </div>
+                            </div>
+                        </fieldset><br>
+            
+                        <fieldset class="container">
+                            <div>
+                                <label for="email">Email</label>
+                                <input type="text" id="email" class="form-control" placeholder="email@exemple.com">
+                            </div>
+                        </fieldset><br>
+
+                        <!--Objet-->
+                        <fieldset class="container">
+                            <legend class="text-dark">Objet</legend>
+                            <div>
+                                <input type="text" id="objet" class="form-control" placeholder="Sujet de votre message">
+                            </div>
+                        </fieldset><br>
+                
+                        <!--Questions-->
+                        <fieldset class="container">
+                            <legend class="text-dark">Message</legend>
+                            <div>
+                                <textarea class="form-control" id="message" rows="4" placeholder="Texte de votre message"></textarea>
+                            </div>
+                        </fieldset>
+                        <br>
+                
+                        <div class="pt-4">
+                            <button type="submit" class="btn btn-primary position-relative bottom-0 start-50 translate-middle">Envoyer</button>
+                        </div>
+                    </div>
+                </form>
+                <script>
+                    document.getElementById("myForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Empêche la soumission par défaut du formulaire
+                    sendMail(); // Appelle la fonction sendMail()
+                    });
+                </script>
             </div>
         </div>
-        
+
     </body>
     <footer class="bg-primary">
         <div class="container">

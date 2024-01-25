@@ -20,7 +20,11 @@ $(document).ready(function() {
     // ENIGME__________1 ==> 2
     $('#submitBtn1').click(function() {
         var answer = $('#answer1').val().trim();      
-        if (answer === "48°50'29 NORD 2°13'44 EST" || answer === "48°50'29NORD 2°13'44EST" || answer === "48°50'29 NORD2°13'44EST" || answer === "48°50'29NORD2°13'44 EST" || answer === "48°50'29 NORD 2°13'44EST") {
+        if (answer === "48°50'29 NORD 2°13'44 EST" || answer === "48°50'29NORD 2°13'44EST" || 
+        answer === "48°50'29 NORD2°13'44EST" || answer === "48°50'29NORD2°13'44 EST" || 
+        answer === "48°50'29 NORD 2°13'44EST" || answer === "48°50'29 N 2°13'44 E" || 
+        answer === "48°50'29N 2°13'44E" || answer === "48°50'29N2°13'44E" || 
+        answer === "48°50'29N 2°13'44E" || answer === "48°50'29N2°13'44 E") {
             alert('Très bien, rendez-vous aux coordonnées GPS près de la station Boulogne Porte de St-Cloud !');
             $('.enigme1').hide();
             $('.enigme2').show();
@@ -426,7 +430,7 @@ $(document).ready(function() {
         // Marqueur 7 Statue Vincennes
         var marker7 = L.marker([48.82906840806047, 2.4137365894110454]).addTo(maps).bindPopup("<p>Eau</p>");
 
-        //Polygone de recherche
+        //La grande vague de Kanagawa
         var coordonnees = [[48.84145254895848, 2.228976272502428], // Albert-Khan
         [48.844250, 2.249889],
         [48.848556, 2.262167],
@@ -476,8 +480,6 @@ $(document).ready(function() {
     $('#end').click(function() {
         window.location.href = 'index.html';
     });
-
-
 });
 
 
